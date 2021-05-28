@@ -1,9 +1,19 @@
-
+import { Provider } from "react-redux";
+import DefaultComponent from "./components/DefaultComponent";
+import store from './store/store';
 
 function App() {
+  
   return (
-   <h1>hello SP</h1>
+    <Provider store={store}>
+      <DefaultComponent/>
+
+    </Provider>
   );
+  
 }
+
+
+
 
 export default App;
