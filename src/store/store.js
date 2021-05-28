@@ -1,5 +1,7 @@
-import { createStore } from "redux";
-import rootReducer from './reducers/index';
+import { createStore, applyMiddleware } from "redux";
+import rootReducer from './reducers/rootReducer';
+import thunk from 'redux-thunk';
+
 
 const initialState = {
   hello: 'Hello World',
@@ -7,6 +9,6 @@ const initialState = {
   userData: { name: 'unknown' }
 }
 
-const store = createStore(rootReducer, initialState);
+const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
 
 export default store;
