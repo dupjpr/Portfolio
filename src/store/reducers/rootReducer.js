@@ -1,7 +1,9 @@
+import { LOADING } from '../../utilities/constants';
+
 const rootReducer = (state, action) => {
 
     switch (action.type) {
-        case 'LOADING':
+        case LOADING:
             return {
                 ...state,
                 loading: action.payload
