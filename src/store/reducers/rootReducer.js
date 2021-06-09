@@ -1,4 +1,4 @@
-import { LOADING } from '../../utilities/constants';
+import { LOADING, GET_PROFILE, ERROR } from '../../utilities/constants';
 
 const rootReducer = (state, action) => {
 
@@ -8,10 +8,19 @@ const rootReducer = (state, action) => {
                 ...state,
                 loading: action.payload
             }
+        case GET_PROFILE:
+            return {
+                ...state,
+                data: action.payload
+            }
+        case ERROR:
+            return {
+                ...state,
+                error: action.payload
+            }
         default:
             return state
     }
-
 }
 
 export default rootReducer;

@@ -1,11 +1,19 @@
 import axios from 'axios';
 
-const request = async (action, url, params) => {
+const request = async (httpVerb, url, params) => {
 
-  return await action(url, params)
-    .then((response) => response?.data)
-    .catch((error) => (console.error(error)));
+  return await httpVerb(url, params)
+    .then((res) => res.data)
+    .catch(errorHandler);
+}
 
+const errorHandler = (error) => {
+  const status = error?.response?.status;
+  if (!status) {
+    throw Error('Server unavailable');
+  } else {
+    throw error
+  }
 }
 
 const _http = {

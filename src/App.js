@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Provider } from "react-redux";
 import DefaultComponent from "./components/defaultComponent/DefaultComponent";
 import About from "./components/about/About";
@@ -7,12 +6,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation,
   NavLink,
 } from "react-router-dom";
 
 import './utilities/Normalize.scss';
-
 
 function App() {
   return (
@@ -31,7 +28,6 @@ function App() {
       </Router>
     </Provider>
   );
-
 }
 
 export default App;
