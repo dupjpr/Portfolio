@@ -9,7 +9,7 @@ const DefaultComponent = () => {
 
   useEffect(() => {
     dispatch(getDataAction());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -20,7 +20,7 @@ const DefaultComponent = () => {
           : <Fragment>
             <h1>Welcome to Cognitio Artifacts SAS</h1>
             <div>{storeData.hello}</div>
-            {storeData?.data && <p>{storeData?.data.name} </p> }
+            {storeData?.data && <p>{storeData?.data.name} </p>}
           </Fragment>
       }
     </section>

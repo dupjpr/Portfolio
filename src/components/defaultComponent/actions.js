@@ -1,4 +1,8 @@
-import { LOADING, GET_PROFILE, ERROR } from '../../utilities/constants';
+import {
+  LOADING,
+  GET_PROFILE,
+  ERROR
+} from '../../utilities/constants';
 import { _http } from "../../utilities/httpRequest";
 
 const demoUrl = 'https://pokeapi.co/api/v2/ability';
@@ -22,7 +26,7 @@ const { loading, getData, error } = actions;
 
 const getDataAction = () => {
   return dispatch => {
-     dispatch(loading(true));
+    dispatch(loading(true));
     _http.GET(demoUrl)
       .then((res) => {
         dispatch(getData(res))

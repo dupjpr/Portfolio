@@ -22,8 +22,8 @@ function App() {
           About
         </NavLink>
         <Switch>
-          <Route path="/" exact><DefaultComponent/></Route>
-          <Route path="/about"><About/></Route>
+          <Route path="/" exact><DefaultComponent /></Route>
+          <Route path="/about"><About /></Route>
         </Switch>
       </Router>
     </Provider>
