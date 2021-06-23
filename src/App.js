@@ -1,6 +1,7 @@
 import { Provider } from "react-redux";
 import DefaultComponent from "./components/defaultComponent/DefaultComponent";
 import About from "./components/about/About";
+import Home from './components/Home/Home.jsx'
 import store from './store/store';
 import {
   BrowserRouter as Router,
@@ -11,6 +12,7 @@ import {
 
 import './utilities/Normalize.scss';
 
+
 function App() {
   return (
     <Provider store={store}>
@@ -18,11 +20,11 @@ function App() {
         <NavLink to="/">
           Home
         </NavLink>
-        <NavLink to="/about">
-          About
+        <NavLink to="/porojects">
+          Projects
         </NavLink>
         <Switch>
-          <Route path="/" exact><DefaultComponent /></Route>
+          <Route path="/" exact> <Home /> </Route>
           <Route path="/about"><About /></Route>
         </Switch>
       </Router>
