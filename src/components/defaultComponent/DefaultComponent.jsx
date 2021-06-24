@@ -14,15 +14,10 @@ const DefaultComponent = () => {
 
   return (
     <section className='sectionHome-container'>
-      {
-        storeData?.loading
-          ? <h1>Loading...</h1>
-          : <Fragment>
-            <h1>Welcome to Cognitio Artifacts SAS</h1>
-            <div>{storeData.hello}</div>
-            {storeData?.data && <p>{storeData?.data.name} </p>}
-          </Fragment>
-      }
+      Hello.
+      I am
+      Juan Pablo Rodríguez.
+
     </section>
   );
 }
