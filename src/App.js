@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import DefaultComponent from "./components/defaultComponent/DefaultComponent";
-import About from "./components/about/About";
+import Dropdown from "./components/Dropdowns/Dropdown";
 import store from './store/store';
 import {
   BrowserRouter as Router,
@@ -16,15 +16,17 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        {/* <NavLink to="/">
-          Home
-        </NavLink>
-        <NavLink to="/porojects">
-          Projects
-        </NavLink> */}
+        <header className='header'>
+          <NavLink to="/" >
+            Home
+          </NavLink>
+          <NavLink to="/dropdown" >
+            Dropdowns
+          </NavLink>
+        </header>
         <Switch>
-          <Route path="/" exact> <DefaultComponent/> </Route>
-          <Route path="/about"><About /></Route>
+          <Route path="/" exact> <DefaultComponent /> </Route>
+          <Route path="/dropdown"> <Dropdown /> </Route>
         </Switch>
       </Router>
     </Provider>

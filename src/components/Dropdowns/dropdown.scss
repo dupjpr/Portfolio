@@ -1,0 +1,172 @@
+section.sectionDropDown-container {
+  width: 100%;
+  height: 95vh;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  div.item-1 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    nav.navBar {
+      width: 60%;
+      height: 10%;
+      background-color: #3d3d3d;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0px 15px rgba(0, 0, 0, 0.07);
+      i.fab {
+        width: 35%;
+        color: #fff28c;
+        font-size: 2rem;
+        padding-left: 7%;
+      }
+      div.second {
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+      }
+      a.first:hover {
+        border-bottom: 1px solid #fff28c;
+      }
+      a.contact:hover {
+        border-bottom: 1px solid #fff28c;
+      }
+      a {
+        text-decoration: none;
+        margin-right: 5%;
+        color: whitesmoke;
+        position: relative;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      }
+      div.dropdown {
+        position: relative;
+        margin-right: 5%;
+        div.drop {
+          display: flex;
+          flex-direction: row;
+          a.dropbtn {
+            width: auto;
+            color: whitesmoke;
+            background-color: #3d3d3d;
+          }
+        }
+        div.drop i {
+          color: whitesmoke;
+          transform: rotate(-90deg);
+        }
+        div.dropdown-content {
+          display: none;
+          position: absolute;
+          right: 0;
+        }
+      }
+      div.dropdown:hover .dropdown-content {
+        display: block;
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        background-color: #3d3d3d;
+      }
+      div.dropdown:hover div.drop i {
+        transform: rotate(0deg);
+      }
+
+      div.dropdown-content a {
+        text-decoration: none;
+        color: whitesmoke;
+        padding-left: 5%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      div.dropdown-content a:hover {
+        width: 100%;
+        color: #fff28c;
+      }
+    }
+  }
+
+  div.item-2 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+
+    nav.navBar2 {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      z-index: 1;
+      background-image: linear-gradient(to right top, #568ead29, #56617454, #3d3d3d53);
+
+      border-radius: 10px;
+      div.boton {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        i {
+          color:#05F2F2;
+          font-size: 1.8rem;
+        }
+        div.menu {
+          display: none;
+          position: absolute;
+          div.icon {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            i{
+              color: #05F2F2;
+              font-size: 1.4rem;
+              padding-left: 10%;
+              width: 30%;
+            }
+            p{
+              color: whitesmoke;
+              width: 70%;
+              border: none;
+              text-align: start;
+
+            }
+          }
+          div.icon:hover p{
+            color: #05F2F2;
+
+          }
+        }
+      }
+      div.boton:hover .menu {
+        padding-top: 70%;
+        width: 300%;
+        height: 400%;
+        background-image: linear-gradient(to right top, #05f2f26b, #36bfda5b, #568ead68, #5661749c, #3d3d3d);
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
