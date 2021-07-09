@@ -7,7 +7,7 @@ const initialState = {
   hello: 'Hello World',
   loading: false,
   userData: { name: 'unknown' },
-  rgbChallenge: { status: true, notification:'' },
+  rgbChallenge: { status: true, notification: '', score: 0 },
   result: 0
 }
 
