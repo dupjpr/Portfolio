@@ -22,6 +22,28 @@ const rootReducer = (state, action) => {
         ...state,
         error: action.payload
       }
+    case 'CORRECT':
+      return {
+        ...state,
+        rgbChallenge: { status: action.payload }
+      }
+    case 'NOTIFI':
+      return {
+        ...state,
+        rgbChallenge: { ...state.rgbChallenge, notification: action.payload }
+      }
+      // case 'SCORE':
+      //   console.log('--->',action.payload );
+      //   return {
+      //     ...state,
+      //     rgbChallenge: { ...state.rgbChallenge, score: state.rgbChallenge.score + action.payload }
+      //   }
+      case 'SCORE':
+        console.log('--->',action.payload );
+        return {
+          ...state,
+          result: state.result + action.payload 
+        }
     default:
       return state
   }

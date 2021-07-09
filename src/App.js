@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 
 import './utilities/Normalize.scss';
+import RGB from "./components/RGB/Rgb";
 
 
 function App() {
@@ -23,10 +24,14 @@ function App() {
           <NavLink to="/dropdown" >
             Dropdowns
           </NavLink>
+          <NavLink to="/rgb" >
+            RGB Challenge
+          </NavLink>
         </header>
         <Switch>
           <Route path="/" exact> <DefaultComponent /> </Route>
           <Route path="/dropdown"> <Dropdown /> </Route>
+          <Route path="/rgb"> <RGB /> </Route>
         </Switch>
       </Router>
     </Provider>
