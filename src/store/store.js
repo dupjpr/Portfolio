@@ -7,7 +7,20 @@ const initialState = {
   hello: 'Hello World',
   loading: false,
   userData: { name: 'unknown' },
-  rgbChallenge: { status: true, notification: '', score: 0 },
+  rgbChallenge: {
+    status: true,
+    notification: '',
+    score: 0
+  },
+  ticTac: {
+    display: '',
+    plays: true,
+    times: 0,
+    tokenPlayerOne: '',
+    tokenPlayerTwo: '',
+    board: [[0, 0, 0], [0, 0, 0], [0, 0, 0]],
+    select: true
+  },
   result: 0
 }
 

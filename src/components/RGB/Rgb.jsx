@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Answer from "./Answer";
 
@@ -7,8 +7,6 @@ import './rgb.scss';
 
 const RGB = () => {
 
-  const dispatch = useDispatch();
-  const [notification, setAnswer] = useState(true);
   const [colorsObject, setColorsObject] = useState('');
   const [mainColor, setMainColor] = useState('');
   const storeData = useSelector(state => state);
