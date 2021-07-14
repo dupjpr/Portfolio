@@ -2,7 +2,6 @@ import { createStore, applyMiddleware } from "redux";
 import rootReducer from './reducers/rootReducer';
 import thunk from 'redux-thunk';
 
-
 const initialState = {
   hello: 'Hello World',
   loading: false,
@@ -13,13 +12,22 @@ const initialState = {
     score: 0
   },
   ticTac: {
-    display: '',
     plays: true,
     times: 0,
     tokenPlayerOne: '',
     tokenPlayerTwo: '',
     board: [[0, 0, 0], [0, 0, 0], [0, 0, 0]],
-    select: true
+    select: true,
+    square1: ' ',
+    square2: ' ',
+    square3: ' ',
+    square4: ' ',
+    square5: ' ',
+    square6: ' ',
+    square7: ' ',
+    square8: ' ',
+    square9: ' ',
+    check: true
   },
   result: 0
 }

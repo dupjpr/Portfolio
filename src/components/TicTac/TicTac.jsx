@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setToken, displayHandle, cheking } from "./actionsTicTac.js";
+import { setToken, displayHandle, cheking, resetBoard, initialValid } from "./actionsTicTac.js";
 import Board from "./Board.jsx";
 import Players from "./Players.jsx";
 
@@ -20,13 +20,14 @@ const TicTac = () => {
       }
     }
 
-
   };
 
   const handleReset = () => {
-    dispatch(displayHandle('', true, 0));
+    dispatch(displayHandle(' ', true, 0, false));
     dispatch(setToken('', '', true));
-    // dispatch(cheking([[0, 0, 0], [0, 0, 0], [0, 0, 0]]));
+    dispatch(cheking([[0, 0, 0], [0, 0, 0], [0, 0, 0]]));
+    console.log('reseteado', storeData);
+    dispatch(resetBoard(' ', false));
 
   }
 
@@ -169,6 +170,8 @@ const TicTac = () => {
   };
 
   const checkGame = gameCheck();
+
+  console.log('jugando', storeData);
 
   return (
     <main className='mainTicTac'>
