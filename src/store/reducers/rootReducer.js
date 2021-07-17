@@ -115,7 +115,6 @@ const rootReducer = (state, action) => {
           square9: action.payload
         }
       }
-
     default:
       return state
   }

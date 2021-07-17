@@ -12,7 +12,6 @@ const Board = ({ validation }) => {
 
     if ( validation && storeData.ticTac.tokenPlayerOne && storeData.ticTac.times < 9) {
       if (plays) {
-        console.log('player one');
         dispatch(displayHandle(storeData.ticTac.tokenPlayerOne, !plays, 1, true, square))
         dispatch(cheking({
           token: storeData.ticTac.tokenPlayerOne,
@@ -26,7 +25,6 @@ const Board = ({ validation }) => {
           xvalue: x,
           yvalue: y
         }))
-        console.log('player two');
       }
     }
 

@@ -30,10 +30,6 @@ const reset = (data) => ({
   type: 'RESET-BOARD',
   payload: data
 });
-const validation = (data) => ({
-  type: 'RESET-VALID',
-  payload: data
-});
 
 const setToken = (playerOne, playerTwo, tokenCheck) => {
   return dispatch => {
@@ -44,7 +40,6 @@ const setToken = (playerOne, playerTwo, tokenCheck) => {
 }
 
 const displayHandle = (token, playGame, num, trigger, square) => {
-  console.log('--->',token, square);
   return dispatch => {
     dispatch(display([token, square]));
     dispatch(plays(playGame));
