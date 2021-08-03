@@ -52,7 +52,7 @@ const RGB = () => {
 
     <section>
       <h1>rgb challenge</h1>
-      <h2>{storeData.result}</h2>
+      <h2>{storeData.rgbChallenge.score}</h2>
       <div className='quest'>rgb({`${r},${g},${b}`} )</div>
       <Answer colorSet={colorsObject} mainColor={mainColor} />
       {storeData.rgbChallenge.notification &&
