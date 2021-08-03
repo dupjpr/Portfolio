@@ -1,7 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import './dropdown.scss'
 
 const Dropdown = () => {
@@ -41,10 +38,10 @@ const Dropdown = () => {
             </motion.a>
             <div className="dropdown">
               <div className="drop">
-                <a className="dropbtn">Dropdown</a>
+                <a href="/" className="dropbtn">Dropdown</a>
                 <i className="fas fa-sort-down"></i>
               </div>
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 <motion.a
                   href="#"
                   whileHover={{

@@ -1,11 +1,11 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from 'react';
 import { getDataAction } from './actions'
 import { motion } from "framer-motion";
 import './defaultComponent.scss';
 
 const DefaultComponent = () => {
-  const storeData = useSelector(state => state);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -75,7 +75,6 @@ const DefaultComponent = () => {
           </motion.p>
         </motion.div>
       </div>
-
 
       <div className='item item-4'>
         <motion.p
