@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Answer from "./Answer";
 
-import setColorAction from "./actionsRGB";
 import './rgb.scss';
 
 const RGB = () => {
@@ -49,22 +48,16 @@ const RGB = () => {
 
   const { r, g, b } = mainColor;
 
-  // console.log( storeData.rgbChallenge.score);
-
   return (
 
     <section>
       <h1>rgb challenge</h1>
-      <h2>{storeData.result}</h2>
-
-      <div>rgb({`${r},${g},${b}`} )</div>
-
+      <h2>{storeData.rgbChallenge.score}</h2>
+      <div className='quest'>rgb({`${r},${g},${b}`} )</div>
       <Answer colorSet={colorsObject} mainColor={mainColor} />
-
       {storeData.rgbChallenge.notification &&
         <div className="status">{storeData.rgbChallenge.notification}</div>}
     </section>
-
 
   );
 }

@@ -25,7 +25,7 @@ const rootReducer = (state, action) => {
     case 'CORRECT':
       return {
         ...state,
-        rgbChallenge: { status: action.payload }
+        rgbChallenge: { ...state.rgbChallenge, status: action.payload }
       }
     case 'NOTIFI':
       return {
@@ -113,7 +113,8 @@ const rootReducer = (state, action) => {
           square7: action.payload,
           square8: action.payload,
           square9: action.payload
-        }
+        },
+        rgbChallenge: { ...state.rgbChallenge, score: state.rgbChallenge.score + action.payload }
       }
     default:
       return state
