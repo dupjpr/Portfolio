@@ -33,9 +33,11 @@ const rootReducer = (state, action) => {
         rgbChallenge: { ...state.rgbChallenge, notification: action.payload }
       }
     case 'SCORE':
+      console.log(action.payload);
       return {
         ...state,
-        result: state.result + action.payload
+        rgbChallenge: { ...state.rgbChallenge, score: state.score + action.payload }
+        // result: state.result + action.payload
       }
     case 'PLAYER-ONE':
       return {

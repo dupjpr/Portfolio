@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-
 import setColorAction from './actionsRGB.js';
+
+import './Answer.scss';
 
 const Answer = ({ colorSet, mainColor }) => {
 
@@ -22,8 +23,9 @@ const Answer = ({ colorSet, mainColor }) => {
   }
 
   return (
-    <div className="quest">
+    <div className="answer-container">
       <div
+        className='answer-container-item'
         style={{
           backgroundColor: `rgb( 
           ${color1?.r}, 
@@ -32,9 +34,9 @@ const Answer = ({ colorSet, mainColor }) => {
           )` }}
         onClick={() => handleClick(color1)}
       >
-        1
       </div>
       <div
+        className='answer-container-item'
         style={{
           backgroundColor: `rgb( 
             ${color2?.r}, 
@@ -43,9 +45,9 @@ const Answer = ({ colorSet, mainColor }) => {
         }}
         onClick={() => handleClick(color2)}
       >
-        2
       </div>
       <div
+        className='answer-container-item'
         style={{
           backgroundColor: `rgb( 
             ${color3?.r}, 
@@ -54,7 +56,6 @@ const Answer = ({ colorSet, mainColor }) => {
         }}
         onClick={() => handleClick(color3)}
       >
-        3
       </div>
     </div>
   );

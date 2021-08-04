@@ -29,7 +29,7 @@ const initialState = {
     square9: ' ',
     check: true
   },
-  result: 0
+
 }
 
 const store = createStore(rootReducer, initialState, applyMiddleware(thunk));

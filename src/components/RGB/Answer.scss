@@ -1,0 +1,13 @@
+div.answer-container {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  div.answer-container-item {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+}

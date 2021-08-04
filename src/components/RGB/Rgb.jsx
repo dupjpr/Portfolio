@@ -50,13 +50,21 @@ const RGB = () => {
 
   return (
 
-    <section>
-      <h1>rgb challenge</h1>
-      <h2>{storeData.rgbChallenge.score}</h2>
-      <div className='quest'>rgb({`${r},${g},${b}`} )</div>
-      <Answer colorSet={colorsObject} mainColor={mainColor} />
-      {storeData.rgbChallenge.notification &&
-        <div className="status">{storeData.rgbChallenge.notification}</div>}
+    <section className='game-container'>
+      <h1 className="game-container-title">rgb challenge</h1>
+      <div className='game-container-game'>
+        <h2>{storeData.rgbChallenge.score}</h2>
+        <div className='quest'>rgb({`${r},${g},${b}`} )</div>
+        <Answer colorSet={colorsObject} mainColor={mainColor} />
+        {storeData.rgbChallenge.notification &&
+          <div className="status">{storeData.rgbChallenge.notification}</div>}
+      </div>
+      <div className='game-container-text'>
+        <h2>explanation of game</h2>
+        <p>The map and underlying data set, which are now freely available to the public, depict more than 200,000 neurons and half a billion neural connections contained inside a cube of mouse brain no bigger than a grain of sand.
+          The new research is part of the Machine Intelligence from Cortical Networks (MICrONS) program, which hopes to improve the next generation of machine-learning algorithms by reverse-engineering the cerebral cortex—the part of the brain that in mammals is responsible for higher functions like planning and reasoning. A consortium of researchers led by groups from the Allen Institute, Baylor College of Medicine, and Princeton University collected the data.
+        </p>
+      </div>
     </section>
 
   );
