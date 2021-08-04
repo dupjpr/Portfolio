@@ -21,7 +21,7 @@ const setColorAction = (data, notifi, num) => {
     const timer = setTimeout(() => {
       dispatch(notification(false));
       clear();
-    }, 500);
+    }, 1000);
 
     const clear = () => {
       clearTimeout(timer);
